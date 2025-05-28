@@ -23,7 +23,7 @@ WORKDIR /var/www
 
 COPY . .
 
-COPY .env .env
+COPY .env.example .env
 
 RUN composer install
 RUN npm install && npm run build
