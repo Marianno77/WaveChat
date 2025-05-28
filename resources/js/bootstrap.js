@@ -31,3 +31,5 @@ window.Echo = new Echo({
     //     enabledTransports: ['ws', 'wss'],
     encrypted: true,
 });
+
+console.log("VITE_PUSHER_APP_KEY", import.meta.env.VITE_PUSHER_APP_KEY);

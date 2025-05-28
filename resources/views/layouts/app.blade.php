@@ -23,8 +23,4 @@
 
 </body>
 
-<script>
-    console.log("VITE_PUSHER_APP_KEY", import.meta.env.VITE_PUSHER_APP_KEY);
-</script>
-
 </html>
