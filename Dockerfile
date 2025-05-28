@@ -1,5 +1,6 @@
 FROM php:8.2-fpm
 
+
 RUN apt-get update && apt-get install -y \
     build-essential \
     libpng-dev \
@@ -15,15 +16,20 @@ RUN apt-get update && apt-get install -y \
     libssl-dev \
     libzip-dev \
     libpq-dev \
-    && docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd
+    && docker-php-ext-install pdo pdo_pgsql pgsql mbstring exif pcntl bcmath gd zip
+
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
+
 WORKDIR /var/www
+
 
 COPY . .
 
+
 COPY .env.example .env
+
 
 RUN composer install
 RUN npm install && npm run build
