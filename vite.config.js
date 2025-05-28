@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue';
 import path from 'path';
 
 export default defineConfig({
-    base: 'https://wavechat-wnu4.onrender.com/build/',
+    base: '/build/',
 
     plugins: [
         laravel({
