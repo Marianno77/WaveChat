@@ -1,6 +1,5 @@
 FROM php:8.2-fpm
 
-
 RUN apt-get update && apt-get install -y \
     build-essential \
     libpng-dev \
@@ -18,21 +17,18 @@ RUN apt-get update && apt-get install -y \
     libpq-dev \
     && docker-php-ext-install pdo pdo_pgsql pgsql mbstring exif pcntl bcmath gd zip
 
-
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-
 
 WORKDIR /var/www
 
-
 COPY . .
 
-
-COPY .env.example .env
-
-
-RUN composer install
+RUN composer install --no-dev --optimize-autoloader
 
 RUN npm install && npm run build
 
-CMD php artisan serve --host=0.0.0.0 --port=8080
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8080"]

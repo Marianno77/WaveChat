@@ -11,7 +11,17 @@ services:
     envVars:
       - key: APP_ENV
         value: production
-      - key: APP_KEY
-        value: <TU_WSTAW_APP_KEY>
+      - key: APP_URL
+        value: https://wavechat.onrender.com
       - key: DB_CONNECTION
         value: sqlite
+      - key: BROADCAST_DRIVER
+        value: pusher
+      - key: PUSHER_APP_ID
+        value: <DO_UZUPEŁNIENIA_W_RENDER_PANELU>
+      - key: PUSHER_APP_KEY
+        value: <...>
+      - key: PUSHER_APP_SECRET
+        value: <...>
+      - key: PUSHER_APP_CLUSTER
+        value: eu
