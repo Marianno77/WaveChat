@@ -25,3 +25,7 @@ services:
         value: <...>
       - key: PUSHER_APP_CLUSTER
         value: eu
+      - key: VITE_PUSHER_APP_KEY
+        value: <twoj_pusher_app_key>
+      - key: VITE_PUSHER_APP_CLUSTER
+        value: eu
