@@ -23,9 +23,13 @@ WORKDIR /var/www
 
 COPY . .
 
+COPY entrypoint-build.sh /entrypoint-build.sh
+RUN chmod +x /entrypoint-build.sh
+
+RUN /entrypoint-build.sh
+
 RUN composer install --no-dev --optimize-autoloader
 
-RUN npm install && npm run build
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
