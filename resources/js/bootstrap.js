@@ -4,8 +4,8 @@
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-console.log('import.meta.env:', import.meta.env);
-console.log("VITE_PUSHER_APP_KEY", import.meta.env.VITE_PUSHER_APP_KEY);
+//console.log('import.meta.env:', import.meta.env);
+//console.log("VITE_PUSHER_APP_KEY", import.meta.env.VITE_PUSHER_APP_KEY);
 
 import axios from 'axios';
 window.axios = axios;
