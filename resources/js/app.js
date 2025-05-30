@@ -8,6 +8,7 @@ import Friend from './components/Friend.vue';
 import Profile from './components/Profile.vue';
 import Conversation from './components/Conversation.vue';
 import Messages from './components/Messages.vue';
+import Home from './components/Home.vue';
 
 axios.defaults.withCredentials = true;
 axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
@@ -21,5 +22,6 @@ app.component('friend', Friend);
 app.component('profile', Profile);
 app.component('conversation', Conversation);
 app.component('messages', Messages);
+app.component('home', Home);
 
 app.mount('#app');

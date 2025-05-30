@@ -131,7 +131,8 @@ h2 {
 }
 
 .register-form form section input {
-    width: 300px;
+    width: 90%;
+    max-width: 300px;
     height: 45px;
     border-radius: 30px;
     border: 2px solid transparent;

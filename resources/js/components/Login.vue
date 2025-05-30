@@ -122,7 +122,8 @@ h2 {
 }
 
 .login-form form section input {
-    width: 300px;
+    width: 90%;
+    max-width: 300px;
     height: 45px;
     border-radius: 30px;
     padding-left: 20px;

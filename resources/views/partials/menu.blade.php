@@ -9,7 +9,7 @@
 <div class="bottom">
     <div class="menu">
         @auth
-            <div class="menu-chat-btn"><a href="{{ route('conversations') }}"><button> Chat </button></a></div>
+            <div class="menu-chat-btn"><a href="{{ route('conversations') }}"><button> Czat </button></a></div>
             <div class="menu-friend-btn"><a href="{{ route('friends') }}"><button> Znajomi </button></a></div>
             <div class="menu-profile-btn"><a href="{{ route('profile') }}"><button> Profil </button></a></div>
         @endauth
