@@ -586,4 +586,11 @@ export default {
     align-items: center;
 }
 
+.friends-list p,
+.friends-status p,
+.block-list p {
+    text-align: center;
+    margin-top: 20px;
+}
+
 </style>
