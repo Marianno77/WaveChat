@@ -127,4 +127,4 @@ Created by **Mariusz Bienasz**
 
 ## 📌 Licencja / License
 
-> *Ten projekt nie zawiera obecnie licencji.
+> *Ten projekt nie zawiera obecnie licencji. / This project currently does not include a license.
